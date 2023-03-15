@@ -1,7 +1,7 @@
 /* opgave 1*/
 
 
- input {
+input {
   height: 1rem;
   padding: 0.3rem;
   margin-bottom: 1rem;
@@ -10,4 +10,66 @@
   background-color: #ffffff;
   border: 2px solid black;
   border-radius: 0.4rem;
+}
+
+
+.falseInput {
+  border: 2px solid red;
+  animation-name: false;
+  animation-iteration-count: 4;
+  animation-duration: 200ms;
+}
+
+.trueInput {
+  border: 2px solid green;
+}
+
+/* @keyframes false {
+  0% {transform: translateX(5px)}
+  33% {transform: translateX(-5px)}
+  66% {transform: translateX(5px)}
+  100% {transform: translateX(0px)}
+} */
+@keyframes false {
+  0% {transform: translateX(3px)}
+  50% {transform: translateX(-3px)}
+  100% {transform: translateX(0px)}
+}
+
+
+
+
+#galleri {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.animalContainer {
+  width: 200px;
+  animation-name: galleryCard;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.animalContainer img {
+  width: 100%;
+}
+.animalContainer h2 {
+  font-size: 1.4rem;
+}
+.animalContainer h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.animalContainer p {
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+@keyframes galleryCard {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
 }
