@@ -1,53 +1,66 @@
 /* opgave 1
 */
 
-.pop{
+.pop {
   background-color: red;
-color:antiquewhite;
-width: 100px;
-height: 100px;
-text-align: center;
-border-radius: 50px;
+  color: antiquewhite;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 50px;
 
 }
 
-.pop:hover{
- 
+.pop:hover {
+  animation-name: popUp;
+  animation-duration: 400ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
-.popTwo{
+@keyframes popUp {
+  from {transform: scale(100%);}
+  to {transform: scale(110%);}
+}
+
+.popTwo {
   background-color: rgb(241, 206, 7);
-color:antiquewhite;
-width: 100px;
-height: 100px;
-text-align: center;
-border-radius: 50px;
+  color: antiquewhite;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 50px;
 }
 
-.popTwo:hover{
+.popTwo:hover {
+  animation-name: popUpDown;
+  animation-duration: 400ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
 
+@keyframes popUpDown {
+  0% {transform: scale(100%);}
+  50% {transform: scale(120%);}
+  100% {transform: scale(100%)}
 }
 
 
 
 
-.popThree{
+.popThree {
   background-color: rgb(7, 90, 25);
-color:antiquewhite;
-width: 100px;
-height: 100px;
-text-align: center;
-border-radius: 50px;
+  color: antiquewhite;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 50px;
 }
 
-.popThree:hover{
- 
+.popThree:hover {
+  animation-iteration-count: infinite;
   animation-duration: 500ms;
   animation-timing-function: ease;
-
+  animation-name: popUpDown;
+  /* animation-direction: alternate-reverse; */
 }
-
-
-
-
-
